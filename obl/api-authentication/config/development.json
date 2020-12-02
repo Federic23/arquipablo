@@ -1,0 +1,14 @@
+{
+    "repository": {
+        "url": "mongodb://localhost:27017/auditdb"
+    },
+    "credentials": {
+        "clientId": "ort",
+        "clientSecret": "Ort123",
+        "permissions": [
+            "/shipment/read",
+            "/shipment/write", 
+            "/cadet/read"
+        ]
+    }
+}

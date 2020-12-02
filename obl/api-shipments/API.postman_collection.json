@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "60800bbb-1261-4b47-9c9b-8cf414681834",
+		"name": "OBL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Shipment",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/shipments/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shipments",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Shipments",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/shipments?limit=10&offset=0",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shipments"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Shipments",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"Test\",\n    \"locationClientSender\": \"0\",\n    \"locationClientReciver\": \"1\",\n    \"paymentMethods\": \"metodo de pago 1\",\n    \"commission\": \"test\",\n    \"picture\": \"pic.jpg\",\n    \"date\": \"2019-04-04\" \n}"
+				},
+				"url": {
+					"raw": "localhost:8080/shipments",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shipments"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

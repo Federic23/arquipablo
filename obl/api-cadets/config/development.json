@@ -1,0 +1,27 @@
+{
+    "repository": {
+        "mysql": {
+            "user": "root",
+            "password": "root",
+            "database": "cadetsdb",
+            "options": {
+                "host": "localhost",
+                "dialect": "mysql",
+                "pool": {
+                  "max": 10,
+                  "min": 0,
+                  "acquire": 30000,
+                  "idle": 10000
+                }
+            }
+        }
+    },
+    "middlewares": {
+        "xmlParser": {
+            "xmlOptions": {
+                "explicitRoot": false,
+                "explicitArray": false
+            }
+        }
+    }
+}
